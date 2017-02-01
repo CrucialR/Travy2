@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cc">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#f83d8fb7"
+                android:gravity="center"
+                android:id="@+id/button"
+                android:text="Home"
+                android:textColor="#fff" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#f83d8fb7"
+                android:gravity="center"
+                android:text="Favorite"
+                android:textColor="#fff" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#f83d8fb7"
+                android:gravity="center"
+                android:text="Board"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#f83d8fb7"
+                android:gravity="center"
+                android:text="HOT"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:gravity="center"
+                android:text="오늘의 HOT 영상"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/youtube_view"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
