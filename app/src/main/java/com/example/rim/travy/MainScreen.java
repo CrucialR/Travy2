@@ -27,7 +27,6 @@ public class MainScreen extends YouTubeBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         youTubePlayerView=(YouTubePlayerView)findViewById(R.id.youtube_view);
-        startActivity(new Intent(this, popup.class));
 
 
 //        thumbnailView = new YouTubeThumbnailView(this);
