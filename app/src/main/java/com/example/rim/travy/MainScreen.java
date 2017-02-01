@@ -16,7 +16,8 @@ import com.google.android.youtube.player.YouTubeThumbnailView;
 
 public class MainScreen extends YouTubeBaseActivity {
 
-    Button start;
+    private  Button start;
+    private Button Board_Button;
     private YouTubePlayerView youTubePlayerView; // 유투브
     private YouTubePlayer.OnInitializedListener onInitializedListener;
     private YouTubeThumbnailView thumbnailView;
@@ -26,8 +27,8 @@ public class MainScreen extends YouTubeBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
+        Board_Button=(Button)findViewById(R.id.Board_Button);
         youTubePlayerView=(YouTubePlayerView)findViewById(R.id.youtube_view);
-
 
 //        thumbnailView = new YouTubeThumbnailView(this);
 //        thumbnailView.initialize(DeveloperKey, (YouTubeThumbnailView.OnInitializedListener) this);
@@ -41,12 +42,19 @@ public class MainScreen extends YouTubeBaseActivity {
             public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult){
             }
         };
-        start=(Button)findViewById(R.id.button);
+        start=(Button)findViewById(R.id.Home_Button);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
             youTubePlayerView.initialize("AIzaSyAsbqUJeKi1hgVykPamYicsHXn890zQOk0",onInitializedListener);
 
+            }
+        });
+        Board_Button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent Board_Intent=new Intent(MainScreen.this, MainScreen.class);
+                startActivity(Board_Intent);
             }
         });
 
